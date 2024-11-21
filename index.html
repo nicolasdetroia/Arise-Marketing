@@ -13,6 +13,11 @@
                         primary: '#0078d4',
                         secondary: '#00509e',
                         accent: '#ffd700',
+                        dark: '#1e1e1e',
+                        light: '#f9f9f9',
+                    },
+                    fontFamily: {
+                        sans: ['Helvetica Neue', 'Arial', 'sans-serif'],
                     },
                 },
             },
@@ -20,141 +25,146 @@
         };
     </script>
     <style>
-        /* Custom Animations */
-        @keyframes slideIn {
-            0% {
+        /* Custom Parallax Animation */
+        .parallax {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Fade-In Animation */
+        @keyframes fadeIn {
+            from {
                 opacity: 0;
-                transform: translateX(-100%);
             }
-            100% {
+            to {
                 opacity: 1;
-                transform: translateX(0);
             }
         }
-        .animate-slideIn {
-            animation: slideIn 0.5s ease-out;
+
+        .animate-fadeIn {
+            animation: fadeIn 1.5s ease-in-out;
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-light text-dark font-sans">
 
-<!-- Header with Dark Mode Toggle -->
-<header class="bg-primary text-white">
+<!-- Navigation Bar -->
+<header class="fixed top-0 w-full bg-white shadow-lg z-50">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <h1 class="text-3xl font-bold">Initiaze Marketing</h1>
-        <div class="flex items-center space-x-6">
-            <nav class="hidden md:flex space-x-6">
-                <a href="#services" class="hover:underline">Services</a>
-                <a href="#about" class="hover:underline">About</a>
-                <a href="#contact" class="hover:underline">Contact</a>
-            </nav>
-            <button id="darkModeToggle" class="text-white">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v3m6.364-1.636l-2.121 2.121M21 12h-3m-1.636 6.364l-2.121-2.121M12 21v-3m-6.364 1.636l2.121-2.121M3 12h3m1.636-6.364l2.121 2.121" />
-                </svg>
-            </button>
-        </div>
+        <a href="#" class="text-3xl font-bold text-primary">Initiaze Marketing</a>
+        <nav class="hidden md:flex space-x-6">
+            <a href="#hero" class="text-dark hover:underline">Home</a>
+            <a href="#services" class="text-dark hover:underline">Services</a>
+            <a href="#about" class="text-dark hover:underline">About</a>
+            <a href="#contact" class="text-dark hover:underline">Contact</a>
+        </nav>
+        <button id="menuToggle" class="block md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+        </button>
+    </div>
+    <div id="mobileMenu" class="hidden bg-light shadow-md absolute w-full">
+        <a href="#hero" class="block px-6 py-2 text-dark hover:bg-gray-100">Home</a>
+        <a href="#services" class="block px-6 py-2 text-dark hover:bg-gray-100">Services</a>
+        <a href="#about" class="block px-6 py-2 text-dark hover:bg-gray-100">About</a>
+        <a href="#contact" class="block px-6 py-2 text-dark hover:bg-gray-100">Contact</a>
     </div>
 </header>
 
-<!-- Hero Section with Animation -->
-<section class="bg-gradient-to-r from-primary to-secondary text-white py-16">
-    <div class="container mx-auto px-6 text-center animate-slideIn">
-        <h2 class="text-5xl font-bold">Transform Your Marketing Strategy</h2>
-        <p class="mt-4 text-lg">Unlock your business potential with our innovative solutions.</p>
-        <a href="#services" class="mt-6 inline-block bg-accent text-primary font-semibold py-3 px-6 rounded hover:bg-yellow-500 transition">Get Started</a>
+<!-- Hero Section -->
+<section id="hero" class="parallax bg-cover bg-center h-screen" style="background-image: url('https://via.placeholder.com/1920x1080');">
+    <div class="container mx-auto px-6 h-full flex flex-col justify-center items-center text-center text-white">
+        <h1 class="text-5xl md:text-7xl font-bold animate-fadeIn">Redefine Marketing</h1>
+        <p class="text-xl md:text-2xl mt-4 animate-fadeIn">Empowering your brand to succeed in the digital age.</p>
+        <a href="#services" class="mt-6 bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded transition animate-fadeIn">
+            Get Started
+        </a>
     </div>
 </section>
 
-<!-- Services Section with Interactive Tabs -->
-<section id="services" class="container mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold text-primary text-center mb-6">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
-            <h3 class="text-xl font-semibold text-primary">Social Media Management</h3>
-            <p class="mt-2 text-gray-600">Engage your audience effectively on all major platforms.</p>
-        </div>
-        <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
-            <h3 class="text-xl font-semibold text-primary">Search Engine Optimization</h3>
-            <p class="mt-2 text-gray-600">Improve your search rankings and organic visibility.</p>
-        </div>
-        <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
-            <h3 class="text-xl font-semibold text-primary">Pay-Per-Click Advertising</h3>
-            <p class="mt-2 text-gray-600">Maximize ROI with cost-effective ad strategies.</p>
-        </div>
-    </div>
-</section>
-
-<!-- Testimonials Slider -->
-<section id="testimonials" class="bg-gray-100 py-12">
+<!-- Services Section -->
+<section id="services" class="py-16 bg-gray-100">
     <div class="container mx-auto px-6">
-        <h2 class="text-3xl font-bold text-primary text-center mb-6">What Our Clients Say</h2>
-        <div id="slider" class="relative overflow-hidden">
-            <div id="slides" class="flex transition-transform duration-700">
-                <div class="min-w-full p-6">
-                    <p class="text-lg text-gray-700">"Initiaze Marketing transformed our digital presence and helped us achieve our growth goals!"</p>
-                    <h4 class="text-primary font-bold mt-4">- John Doe, CEO</h4>
-                </div>
-                <div class="min-w-full p-6">
-                    <p class="text-lg text-gray-700">"Their team is incredibly professional and delivers measurable results."</p>
-                    <h4 class="text-primary font-bold mt-4">- Jane Smith, Marketing Director</h4>
-                </div>
+        <h2 class="text-4xl font-bold text-center text-dark">Our Services</h2>
+        <p class="text-center text-gray-600 mt-4">Comprehensive solutions for all your marketing needs.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+            <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
+                <img src="https://via.placeholder.com/200" alt="Service 1" class="w-full rounded-t-lg">
+                <h3 class="text-xl font-semibold text-primary mt-4">Social Media Management</h3>
+                <p class="text-gray-600 mt-2">Create, manage, and optimize social content to engage your audience.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
+                <img src="https://via.placeholder.com/200" alt="Service 2" class="w-full rounded-t-lg">
+                <h3 class="text-xl font-semibold text-primary mt-4">SEO Optimization</h3>
+                <p class="text-gray-600 mt-2">Boost your website's visibility and drive organic traffic.</p>
+            </div>
+            <div class="p-6 bg-white shadow-lg rounded-lg hover:shadow-xl transition">
+                <img src="https://via.placeholder.com/200" alt="Service 3" class="w-full rounded-t-lg">
+                <h3 class="text-xl font-semibold text-primary mt-4">Pay-Per-Click Advertising</h3>
+                <p class="text-gray-600 mt-2">Maximize your ROI with targeted ad campaigns.</p>
             </div>
         </div>
-        <div class="flex justify-center space-x-4 mt-6">
-            <button id="prevSlide" class="p-2 bg-primary text-white rounded">Previous</button>
-            <button id="nextSlide" class="p-2 bg-primary text-white rounded">Next</button>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="py-16">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-dark">About Us</h2>
+        <p class="text-gray-600 mt-4">At Initiaze Marketing, we combine innovation and strategy to deliver real results.</p>
+        <div class="flex flex-col md:flex-row items-center justify-center mt-12 space-y-6 md:space-y-0 md:space-x-8">
+            <div class="w-full md:w-1/3 bg-white p-6 shadow-lg rounded-lg">
+                <h3 class="text-xl font-bold text-primary">Our Mission</h3>
+                <p class="text-gray-600 mt-2">To empower businesses with creative marketing strategies that drive success.</p>
+            </div>
+            <div class="w-full md:w-1/3 bg-white p-6 shadow-lg rounded-lg">
+                <h3 class="text-xl font-bold text-primary">Our Vision</h3>
+                <p class="text-gray-600 mt-2">To be a global leader in digital marketing solutions and innovation.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- FAQ Section -->
-<section id="faq" class="container mx-auto px-6 py-12">
-    <h2 class="text-3xl font-bold text-primary text-center mb-6">Frequently Asked Questions</h2>
-    <div class="space-y-4">
-        <div class="bg-white shadow-lg rounded-lg p-6">
-            <button class="font-semibold text-primary w-full text-left focus:outline-none">What services do you offer?</button>
-            <p class="mt-4 text-gray-600 hidden">We offer social media management, SEO, PPC, content marketing, and more.</p>
-        </div>
-        <div class="bg-white shadow-lg rounded-lg p-6">
-            <button class="font-semibold text-primary w-full text-left focus:outline-none">How do I get started?</button>
-            <p class="mt-4 text-gray-600 hidden">Simply contact us via email or phone, and we’ll provide a custom consultation.</p>
-        </div>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-dark">Contact Us</h2>
+        <p class="text-gray-600 mt-4">We'd love to hear from you! Get in touch with us today.</p>
+        <form class="mt-8 space-y-4 max-w-lg mx-auto">
+            <div>
+                <label for="name" class="block text-gray-600">Your Name</label>
+                <input type="text" id="name" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+            </div>
+            <div>
+                <label for="email" class="block text-gray-600">Your Email</label>
+                <input type="email" id="email" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary">
+            </div>
+            <div>
+                <label for="message" class="block text-gray-600">Your Message</label>
+                <textarea id="message" rows="4" class="w-full border-gray-300 rounded-lg shadow-sm focus:ring-primary focus:border-primary"></textarea>
+            </div>
+            <button type="submit" class="bg-primary hover:bg-secondary text-white font-semibold py-3 px-6 rounded transition">
+                Send Message
+            </button>
+        </form>
     </div>
 </section>
 
 <!-- Footer -->
-<footer class="bg-gray-800 text-white text-center py-6">
-    <p>&copy; 2024 Initiaze Marketing. All rights reserved.</p>
+<footer class="bg-dark text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+        <p>&copy; 2024 Initiaze Marketing. All rights reserved.</p>
+    </div>
 </footer>
 
 <script>
-    // Dark Mode Toggle
-    document.getElementById('darkModeToggle').addEventListener('click', () => {
-        document.body.classList.toggle('dark');
-    });
-
-    // Testimonials Slider
-    let currentIndex = 0;
-    const slides = document.getElementById('slides');
-    const slideCount = slides.children.length;
-
-    document.getElementById('nextSlide').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % slideCount;
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-
-    document.getElementById('prevSlide').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + slideCount) % slideCount;
-        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
-    });
-
-    // FAQ Toggle
-    document.querySelectorAll('#faq button').forEach(button => {
-        button.addEventListener('click', () => {
-            const content = button.nextElementSibling;
-            content.classList.toggle('hidden');
-        });
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
     });
 </script>
 </body>
