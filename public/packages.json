@@ -1,0 +1,5 @@
+"homepage": "https://www.github.com/nicolasdetroia>.github.io/arise-scaling",
+"scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+}
