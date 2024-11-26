@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sales Data</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/scripts/charts.js" defer></script>
 </head>
 
 <body class="bg-gray-50 text-gray-800">
@@ -34,65 +35,8 @@
                 <h2 class="text-xl font-bold">Monthly Sales</h2>
                 <canvas id="salesChart" class="mt-6"></canvas>
             </div>
-
-            <!-- Sales Table -->
-            <div class="bg-white p-6 shadow-md rounded-md mt-6">
-                <h2 class="text-xl font-bold">Recent Transactions</h2>
-                <table class="w-full mt-4">
-                    <thead class="bg-gray-100">
-                        <tr>
-                            <th class="py-2 px-4 text-left">Date</th>
-                            <th class="py-2 px-4 text-left">Client</th>
-                            <th class="py-2 px-4 text-right">Amount</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="py-2 px-4">2024-11-25</td>
-                            <td class="py-2 px-4">John Doe</td>
-                            <td class="py-2 px-4 text-right">$1,200</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4">2024-11-24</td>
-                            <td class="py-2 px-4">Jane Smith</td>
-                            <td class="py-2 px-4 text-right">$850</td>
-                        </tr>
-                        <tr>
-                            <td class="py-2 px-4">2024-11-23</td>
-                            <td class="py-2 px-4">ACME Corp</td>
-                            <td class="py-2 px-4 text-right">$2,500</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </main>
     </div>
-
-    <script>
-        const ctx = document.getElementById('salesChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June'],
-                datasets: [{
-                    label: 'Monthly Sales ($)',
-                    data: [1200, 1900, 3000, 5000, 4000, 6000],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 2,
-                    tension: 0.4
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top'
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 
 </html>
