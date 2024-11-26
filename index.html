@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arise Scaling Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .logo img {
+            height: 40px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <aside class="w-64 bg-blue-600 text-white">
+            <div class="p-6 text-2xl font-bold">
+                <a href="index.html" class="block">Arise Scaling</a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="py-2 px-4 hover:bg-blue-700"><a href="sales.html">Sales Data</a></li>
+                    <li class="py-2 px-4 hover:bg-blue-700"><a href="clients.html">Clients</a></li>
+                    <li class="py-2 px-4 hover:bg-blue-700"><a href="reviews.html">Reviews</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6">
+            <h1 class="text-4xl font-bold mb-4">Welcome to Arise Scaling</h1>
+            <p class="text-gray-600">Manage sales, clients, and reviews effectively using our dashboard.</p>
+
+            <!-- Dashboard Overview -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                <div class="bg-white p-6 shadow-md rounded-md">
+                    <h2 class="text-xl font-bold">Total Sales</h2>
+                    <p class="text-2xl mt-2">$123,456</p>
+                </div>
+                <div class="bg-white p-6 shadow-md rounded-md">
+                    <h2 class="text-xl font-bold">Active Clients</h2>
+                    <p class="text-2xl mt-2">87</p>
+                </div>
+                <div class="bg-white p-6 shadow-md rounded-md">
+                    <h2 class="text-xl font-bold">Reviews Received</h2>
+                    <p class="text-2xl mt-2">142</p>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+
+</html>
