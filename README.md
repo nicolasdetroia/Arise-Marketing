@@ -1,5 +1,5 @@
 # Overview
-# What I Learned
+# What I Learned:
 
 Tailwind CSS: Developed responsive, beautiful, and consistent user interfaces by mastering the utility-first design principles of this framework. Applied complete leverage to ensure seamless integration and performance.
 
