@@ -3,350 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arise Scaling</title>
-
-    <!-- Internal CSS -->
-    <style>
-        /* General Reset and Body Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            color: #333;
-            background: #f8f9fa;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        /* Header */
-        header {
-            background: #1c1c1c;
-            color: #fff;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        .logo {
-            width: 180px;
-            margin: 0;
-            display: inline-block;
-        }
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-            gap: 2rem;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            position: relative;
-            padding: 0.5rem;
-            transition: color 0.3s ease;
-        }
-        nav a:hover {
-            color: #ffa500;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1c1c1c, #004aad);
-            color: #fff;
-            padding: 8rem 2rem;
-            text-align: center;
-            position: relative;
-        }
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        .hero .btn-primary {
-            background: #ffa500;
-            color: #fff;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        .hero .btn-primary:hover {
-            background: #fff;
-            color: #ffa500;
-            box-shadow: 0 5px 15px rgba(255, 165, 0, 0.4);
-        }
-
-        /* Features Section */
-        .features {
-            padding: 4rem 0;
-            background: #fff;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-        .features h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            color: #333;
-            text-transform: uppercase;
-        }
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .feature-item {
-            background: #f9f9f9;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .feature-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-        .feature-item i {
-            font-size: 4rem;
-            color: #004aad;
-            margin-bottom: 1rem;
-        }
-        .feature-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #004aad;
-        }
-
-        /* Type Form Styling */
-        #typeform-section {
-            padding: 2rem 0;
-            background: #f8f9fa;
-            text-align: center;
-            border-top: 4px solid #ffa500;
-        }
-
-        /* Footer */
-        footer {
-            background: #1c1c1c;
-            color: #fff;
-            text-align: center;
-            padding: 2rem 0;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
-        footer a {
-            color: #ffa500;
-            text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-        footer a:hover {
-            color: #fff;
-        }
-
-        /* Team Member Images */
-        .team-member {
-            text-align: center;
-            padding: 2rem;
-        }
-        .team-member img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 1rem;
-            border: 4px solid #ffa500;
-        }
-        .team-member h3 {
-            font-size: 1.5rem;
-            color: #004aad;
-            margin-bottom: 0.5rem;
-        }
-        .team-member p {
-            color: #666;
-            font-size: 1rem;
-        }
-
-        /* Call to Action Section */
-        .cta {
-            background: #004aad;
-            color: #fff;
-            padding: 4rem 0;
-            text-align: center;
-        }
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .cta .btn-primary {
-            background: #ffa500;
-            color: #fff;
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        .cta .btn-primary:hover {
-            background: #fff;
-            color: #ffa500;
-            box-shadow: 0 5px 15px rgba(255, 165, 0, 0.4);
-        }
-
-        /* Basic reset to remove margin/padding */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Body styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            padding: 20px;
-            text-align: center;
-        }
-
-        /* Center the iframe on the page */
-        .iframe-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
-
-        /* Style the iframe */
-        iframe {
-            width: 80%; /* Make the iframe responsive */
-            max-width: 800px; /* Max width to prevent it from being too large */
-            height: 600px; /* Set a fixed height */
-            border: none; /* Remove the border */
-            border-radius: 8px; /* Optional: Add rounded corners */
-        }
-
-        /* Optional: Add some styles for the body */
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-    </style>
+    <meta name="description" content="Learn about Arise Scaling's vision, team, and proven track record in digital marketing and business growth">
+    <title>About Arise Scaling | Digital Marketing Experts</title>
+    
+    <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1>Arise Scaling</h1>
-            <p>Learn what makes us different.</p>
+    <header class="header">
+        <div class="container header__container">
+            <a href="../" class="header__logo-link">
+                <img src="../assets/COMPANY_LOGO.png" alt="Arise Scaling Logo" class="logo" width="180" height="60">
+            </a>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Toggle Menu">
+                    <span></span>
+                </button>
+                <div class="nav__links">
+                    <a href="../index.html" class="nav__link">Services</a>
+                    <a href="about.html" class="nav__link">About</a>
+                    <a href="apply.html" class="nav__link nav__link--cta">Apply Now</a>
+                </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Vision Section -->
-    <section class="vision">
-        <div class="container">
-            <h2>Our Vision</h2>
-            <p>
-                At Arise Scaling, we empower brands to thrive in the digital age by delivering innovative and data-driven marketing solutions.
-                We are dedicated to crafting impactful strategies that connect with audiences, drive measurable results, and foster meaningful growth.
-                Through creativity, integrity, and a commitment to excellence, we strive to be a trusted partner in our clients' journey toward success.
-            </p>
-        </div>
-    </section>
+    <main>
+        <section class="vision section">
+            <div class="container">
+                <h1 class="section-title">Our Vision</h1>
+                <p class="section-text">At Arise Scaling, we empower brands to thrive in the digital age by delivering innovative and data-driven marketing solutions. We are dedicated to crafting impactful strategies that connect with audiences, drive measurable results, and foster meaningful growth.</p>
+            </div>
+        </section>
 
-    <!-- Stats Section -->
-    <section class="stats">
-        <div class="container">
-            <div class="stat-item">
-                <h3>Revenue Generated for Clients</h3>
-                <p>$7.5M+</p>
-            </div>
-            <div class="stat-item">
-                <h3>Ad Campaigns Managed</h3>
-                <p>2,000+</p>
-            </div>
-            <div class="stat-item">
-                <h3>Brands Partnered</h3>
-                <p>100+</p>
-            </div>
-            <div class="stat-item">
-                <h3>ROAS</h3>
-                <p>5x+</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>Explore the comprehensive suite of services we offer to drive success for your brand.</p>
-            <ul>
-                <li>Facebook Ads | Tiktok Ads</li>
-                <li>Daily Ad Account Optimization</li>
-                <li>Pixel Set Up</li>
-                <li>Ad Account Warm Up</li>
-                <li>High Level Scaling Strategies</li>
-                <li>Email and SMS</li>
-                <li>Flow Set Up</li>
-                <li>Weekly Newsletter Campaigns</li>
-                <li>Email Design</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section class="team">
-        <div class="container">
-            <h2>Our Team</h2>
-            <p>Meet the dedicated professionals at Arise Scaling. Our team brings a wealth of experience and a passion for helping brands excel in the digital world. We are committed to driving results, fostering growth, and building meaningful relationships with our clients.</p>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="path/to/your/image.jpg" alt="...">
-                    <h3>Nic</h3>
-                    <p>Founder/Owner</p>
-                </div>
-                <div class="team-member">
-                    <img src="path/to/your/image.jpg" alt="...">
-                    <h3>Jeff</h3>
-                    <p>Co-Owner/Head Media Buyer</p>
+        <section class="stats section section--dark">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-aos="fade-up">
+                        <h3>$7.5M+</h3>
+                        <p>Revenue Generated</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3>2,000+</h3>
+                        <p>Campaigns Managed</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3>100+</h3>
+                        <p>Brand Partners</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3>5x+</h3>
+                        <p>Average ROAS</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Call to Action Section -->
-    <section class="cta">
-        <div class="container">
-            <h2>Get Started Today</h2>
-            <p>What should your next step be? Take full advantage of your brand’s potential and apply to work with us today!</p>
-            <a href="#apply" class="btn-primary">Apply Now</a>
-        </div>
-    </section>
+        <section class="services section">
+            <div class="container">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-category">
+                        <h3>Advertising</h3>
+                        <ul>
+                            <li>Facebook & TikTok Ads</li>
+                            <li>Daily Account Optimization</li>
+                            <li>Pixel Setup & Tracking</li>
+                            <li>Account Warm-up Strategy</li>
+                            <li>Advanced Scaling Tactics</li>
+                        </ul>
+                    </div>
+                    <div class="service-category">
+                        <h3>Email Marketing</h3>
+                        <ul>
+                            <li>Email & SMS Integration</li>
+                            <li>Automated Flow Setup</li>
+                            <li>Weekly Newsletters</li>
+                            <li>Custom Email Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Footer -->
-    <footer>
+        <section class="team section">
+            <div class="container">
+                <h2 class="section-title">Meet Our Team</h2>
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up">
+                        <div class="team-member__image">
+                            <img src="../assets/team/nic.jpg" alt="Nic - Founder/Owner" width="150" height="150">
+                        </div>
+                        <h3>Nic</h3>
+                        <p>Founder/Owner</p>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="team-member__image">
+                            <img src="../assets/team/jeff.jpg" alt="Jeff - Co-Owner/Head Media Buyer" width="150" height="150">
+                        </div>
+                        <h3>Jeff</h3>
+                        <p>Co-Owner/Head Media Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta section">
+            <div class="container">
+                <h2>Ready to Scale Your Business?</h2>
+                <a href="apply.html" class="btn-primary btn-primary--large">Apply Now</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Arise Scaling. All rights reserved. <a href="#contact">Contact Us</a></p>
+            <p>&copy; 2024 Arise Scaling. All rights reserved.</p>
+            <nav class="footer__nav">
+                <a href="/privacy">Privacy Policy</a>
+                <a href="/terms">Terms of Service</a>
+            </nav>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../scripts/script.js" defer></script>
 </body>
 </html>
