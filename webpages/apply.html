@@ -4,9 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply Now | Arise Scaling</title>
-    
-    <!-- Link to CSS file -->
-    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Internal CSS for responsive iframe -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and Container Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Center the iframe on the page */
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Style the iframe */
+        iframe {
+            width: 80%; /* Make the iframe responsive */
+            max-width: 800px; /* Max width to prevent it from being too large */
+            height: 600px; /* Set a fixed height */
+            border: none; /* Remove the border */
+            border-radius: 8px; /* Optional: Add rounded corners */
+        }
+    </style>
 </head>
 <body>
     <div class="iframe-container">
