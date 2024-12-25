@@ -174,3 +174,41 @@ footer a:hover {
     color: #666;
     font-size: 1rem;
 }
+
+/* Basic reset to remove margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Center the iframe on the page */
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Style the iframe */
+iframe {
+    width: 80%; /* Make the iframe responsive */
+    max-width: 800px; /* Max width to prevent it from being too large */
+    height: 600px; /* Set a fixed height */
+    border: none; /* Remove the border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+/* Optional: Add some styles for the body */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
