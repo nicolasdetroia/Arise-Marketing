@@ -3,64 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Arise Scaling | Scaling Solutions for TikTok, Shopify, and Meta Platforms</title>
     <meta name="description" content="Arise Scaling specializes in scaling TikTok Shops, Instagram and Meta campaigns, and Shopify organic dropshipping. Transform your business with expert strategies.">
     <meta name="keywords" content="TikTok scaling, Shopify dropshipping, Meta campaigns, Instagram growth, business scaling solutions, organic marketing, eCommerce optimization">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Arise Scaling | Business Growth Solutions">
+    <meta property="og:description" content="Transform your business with expert scaling strategies for TikTok, Shopify, and Meta platforms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://arisescaling.com">
+    
+    <!-- Favicon -->
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon" sizes="16x16">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/COMPANY_LOGO.png" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <!-- Ensure logo image is properly placed in the 'assets' folder -->
-            <img src="assets/COMPANY_LOGO.png" alt="Arise Scaling Logo" class="logo">
-            <nav>
-                <!-- Ensure that paths to the other pages (about.html, form.html) are correct -->
-                <a href="index.html" id="services-button" class="btn-primary">Services</a>
-                <a href="webpages/about.html" id="about-button" class="btn-primary">About</a>
-                <a href="webpages/apply.html" id="apply-now-button" class="btn-primary">Apply Now</a>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="header__logo-link">
+                <img src="assets/COMPANY_LOGO.png" alt="Arise Scaling Logo" class="logo" width="180" height="60">
+            </a>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Toggle Menu">
+                    <span></span>
+                </button>
+                <div class="nav__links">
+                    <a href="index.html" class="nav__link">Services</a>
+                    <a href="webpages/about.html" class="nav__link">About</a>
+                    <a href="webpages/apply.html" class="nav__link nav__link--cta">Apply Now</a>
+                </div>
             </nav>
         </div>
     </header>
 
-    <section class="hero">
-        <h1>Transform Your Business</h1>
-        <p>Scale your TikTok Shop, Meta campaigns, and Shopify dropshipping with expert strategies.</p>
-        <a href="webpages/apply.html" class="btn-primary">Apply Now</a> <!-- Ensure the link points to the form.html file -->
-    </section>
-
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose Arise Scaling?</h2>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <i class="fab fa-tiktok"></i>
-                    <h3>TikTok Shop Scaling</h3>
-                    <p>Grow your brand visibility and drive sales using TikTok’s trending algorithm and optimized campaigns.</p>
+    <main>
+        <section class="hero">
+            <div class="container hero__container">
+                <h1 class="hero__title">Transform Your Business</h1>
+                <p class="hero__subtitle">Scale your TikTok Shop, Meta campaigns, and Shopify dropshipping with expert strategies.</p>
+                <div class="hero__cta">
+                    <a href="webpages/apply.html" class="btn-primary">Apply Now</a>
                 </div>
-                <div class="feature-item">
-                    <i class="fab fa-facebook"></i>
-                    <h3>Meta Campaigns</h3>
-                    <p>Leverage Facebook and Instagram to reach your target audience with precision and measurable results.</p>
-                </div>
-                <div class="feature-item">
-                    <i class="fas fa-cart-plus"></i>
-                    <h3>Shopify Dropshipping</h3>
-                    <p>Optimize your store for organic growth and build sustainable eCommerce success.</p>
+                <div class="hero__scroll">
+                    <span class="scroll-indicator"></span>
                 </div>
             </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Arise Scaling?</h2>
+                <div class="features-grid">
+                    <article class="feature-item" data-aos="fade-up">
+                        <div class="feature-item__icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <h3 class="feature-item__title">TikTok Shop Scaling</h3>
+                        <p class="feature-item__description">Grow your brand visibility and drive sales using TikTok's trending algorithm and optimized campaigns.</p>
+                    </article>
+
+                    <article class="feature-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-item__icon">
+                            <i class="fab fa-facebook"></i>
+                        </div>
+                        <h3 class="feature-item__title">Meta Campaigns</h3>
+                        <p class="feature-item__description">Leverage Facebook and Instagram to reach your target audience with precision and measurable results.</p>
+                    </article>
+
+                    <article class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-item__icon">
+                            <i class="fas fa-cart-plus"></i>
+                        </div>
+                        <h3 class="feature-item__title">Shopify Dropshipping</h3>
+                        <p class="feature-item__description">Optimize your store for organic growth and build sustainable eCommerce success.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <a href="webpages/apply.html" class="btn-primary btn-primary--large">Start Your Growth Journey</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2024 Arise Scaling. All rights reserved.</p>
+                <nav class="footer__nav">
+                    <a href="/privacy" class="footer__link">Privacy Policy</a>
+                    <a href="/terms" class="footer__link">Terms of Service</a>
+                </nav>
+            </div>
         </div>
-    </section>
-
-    <a href="webpages/apply.html" id="apply-now-button" class="btn-primary">Apply Now</a> <!-- Link to the form page -->
-
-    <footer>
-        <p>&copy; 2024 Arise Scaling. All rights reserved. 
     </footer>
 
-    <!-- Ensure script path is correct -->
-    <script src="scripts/script.js"></script>
+    <!-- Scripts -->
+    <script src="scripts/script.js" defer></script>
 </body>
 </html>
