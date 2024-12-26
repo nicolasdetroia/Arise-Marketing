@@ -6,125 +6,136 @@
     <meta name="description" content="Learn about Arise Scaling's vision, team, and proven track record in digital marketing and business growth">
     <title>About Arise Scaling | Digital Marketing Experts</title>
     
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="About Arise Scaling | Digital Marketing Experts">
+    <meta property="og:description" content="Learn about our proven track record in scaling businesses through TikTok, Meta, and Shopify platforms.">
+    <meta property="og:type" content="website">
+    
+    <!-- Favicon -->
     <link rel="icon" href="../assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header class="header">
         <div class="container header__container">
-            <a href="../" class="header__logo-link">
-                <img src="../assets/COMPANY_LOGO.png" alt="Arise Scaling Logo" class="logo" width="180" height="60">
+            <a href="../index.html" class="header__logo-link">
+                <img src="../assets/COMPANY_LOGO.png" alt="Arise Scaling Logo" class="header__logo" width="180" height="60">
             </a>
             <nav class="nav">
                 <button class="nav__toggle" aria-label="Toggle Menu">
-                    <span></span>
+                    <span class="nav__toggle-icon"></span>
                 </button>
                 <div class="nav__links">
-                    <a href="../index.html" class="nav__link">Services</a>
-                    <a href="webpages/about.html" class="nav__link">About</a>
-                    <a href="webpages/apply.html" class="nav__link nav__link--cta">Apply Now</a>
+                    <a href="../index.html#features" class="nav__link">Services</a>
+                    <a href="about.html" class="nav__link">About</a>
+                    <a href="apply.html" class="nav__link nav__link--cta">Apply Now</a>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class="vision section">
+        <section class="vision">
             <div class="container">
-                <h1 class="section-title">Our Vision</h1>
-                <p class="section-text">At Arise Scaling, we empower brands to thrive in the digital age by delivering innovative and data-driven marketing solutions. We are dedicated to crafting impactful strategies that connect with audiences, drive measurable results, and foster meaningful growth.</p>
+                <h1 class="section__title">Our Vision</h1>
+                <p class="section__text">At Arise Scaling, we empower brands to thrive in the digital age by delivering innovative and data-driven marketing solutions. We are dedicated to crafting impactful strategies that connect with audiences, drive measurable results, and foster meaningful growth.</p>
             </div>
         </section>
 
-        <section class="stats section section--dark">
+        <section class="stats section--dark">
             <div class="container">
                 <div class="stats-grid">
-                    <div class="stat-item" data-aos="fade-up">
-                        <h3>$7.5M+</h3>
-                        <p>Revenue Generated</p>
+                    <div class="stat-item">
+                        <h3 class="stat-item__number">$7.5M+</h3>
+                        <p class="stat-item__text">Revenue Generated</p>
                     </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                        <h3>2,000+</h3>
-                        <p>Campaigns Managed</p>
+                    <div class="stat-item">
+                        <h3 class="stat-item__number">2,000+</h3>
+                        <p class="stat-item__text">Campaigns Managed</p>
                     </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                        <h3>100+</h3>
-                        <p>Brand Partners</p>
+                    <div class="stat-item">
+                        <h3 class="stat-item__number">100+</h3>
+                        <p class="stat-item__text">Brand Partners</p>
                     </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                        <h3>5x+</h3>
-                        <p>Average ROAS</p>
+                    <div class="stat-item">
+                        <h3 class="stat-item__number">5x+</h3>
+                        <p class="stat-item__text">Average ROAS</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="services section">
+        <section class="services">
             <div class="container">
-                <h2 class="section-title">Our Services</h2>
+                <h2 class="section__title">Our Services</h2>
                 <div class="services-grid">
                     <div class="service-category">
-                        <h3>Advertising</h3>
-                        <ul>
-                            <li>Facebook & TikTok Ads</li>
-                            <li>Daily Account Optimization</li>
-                            <li>Pixel Setup & Tracking</li>
-                            <li>Account Warm-up Strategy</li>
-                            <li>Advanced Scaling Tactics</li>
+                        <h3 class="service-category__title">Advertising</h3>
+                        <ul class="service-category__list">
+                            <li class="service-category__item">Facebook & TikTok Ads</li>
+                            <li class="service-category__item">Daily Account Optimization</li>
+                            <li class="service-category__item">Pixel Setup & Tracking</li>
+                            <li class="service-category__item">Account Warm-up Strategy</li>
+                            <li class="service-category__item">Advanced Scaling Tactics</li>
                         </ul>
                     </div>
                     <div class="service-category">
-                        <h3>Email Marketing</h3>
-                        <ul>
-                            <li>Email & SMS Integration</li>
-                            <li>Automated Flow Setup</li>
-                            <li>Weekly Newsletters</li>
-                            <li>Custom Email Design</li>
+                        <h3 class="service-category__title">Email Marketing</h3>
+                        <ul class="service-category__list">
+                            <li class="service-category__item">Email & SMS Integration</li>
+                            <li class="service-category__item">Automated Flow Setup</li>
+                            <li class="service-category__item">Weekly Newsletters</li>
+                            <li class="service-category__item">Custom Email Design</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="team section">
+        <section class="team">
             <div class="container">
-                <h2 class="section-title">Meet Our Team</h2>
+                <h2 class="section__title">Meet Our Team</h2>
                 <div class="team-grid">
-                    <div class="team-member" data-aos="fade-up">
+                    <div class="team-member">
                         <div class="team-member__image">
-                            <img src="../assets/team/nic.jpg" alt="Nic - Founder/Owner" width="150" height="150">
+                            <img src="../assets/team/nic.jpg" alt="Nic - Founder and Owner" width="150" height="150">
                         </div>
-                        <h3>Nic</h3>
-                        <p>Founder/Owner</p>
+                        <h3 class="team-member__name">Nic</h3>
+                        <p class="team-member__role">Founder/Owner</p>
                     </div>
-                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-member">
                         <div class="team-member__image">
-                            <img src="../assets/team/jeff.jpg" alt="Jeff - Co-Owner/Head Media Buyer" width="150" height="150">
+                            <img src="../assets/team/jeff.jpg" alt="Jeff - Co-Owner and Head Media Buyer" width="150" height="150">
                         </div>
-                        <h3>Jeff</h3>
-                        <p>Co-Owner/Head Media Buyer</p>
+                        <h3 class="team-member__name">Jeff</h3>
+                        <p class="team-member__role">Co-Owner/Head Media Buyer</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="cta section">
+        <section class="cta">
             <div class="container">
-                <h2>Ready to Scale Your Business?</h2>
-                <a href="webpages/apply.html" class="btn-primary btn-primary--large">Apply Now</a>
+                <h2 class="cta__title">Ready to Scale Your Business?</h2>
+                <a href="apply.html" class="nav__link nav__link--cta nav__link--cta-large">Apply Now</a>
             </div>
         </section>
     </main>
 
     <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Arise Scaling. All rights reserved.</p>
-            <nav class="footer__nav">
-                <a href="/privacy">Privacy Policy</a>
-                <a href="/terms">Terms of Service</a>
-            </nav>
+        <div class="container footer__container">
+            <div class="footer__content">
+                <p class="footer__copyright">&copy; 2024 Arise Scaling. All rights reserved.</p>
+                <nav class="footer__nav">
+                    <a href="privacy.html" class="footer__link">Privacy Policy</a>
+                    <a href="terms.html" class="footer__link">Terms of Service</a>
+                </nav>
+            </div>
         </div>
     </footer>
 
