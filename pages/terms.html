@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Arise Scaling, detailing your rights and obligations when using our services.">
+    <title>Terms of Service | Arise Scaling</title>
+
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <a href="/" class="header__logo-link">
+                <img src="/assets/COMPANY_LOGO.png" alt="Arise Scaling Logo" class="logo" width="180" height="60">
+            </a>
+            <nav class="nav">
+                <button class="nav__toggle" aria-label="Toggle Menu" aria-expanded="false">
+                    <span></span>
+                </button>
+                <div class="nav__links">
+                    <a href="/" class="nav__link">Services</a>
+                    <a href="/about.html" class="nav__link">About</a>
+                    <a href="/apply.html" class="nav__link nav__link--cta">Apply Now</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="terms-hero section">
+            <div class="container">
+                <h1 class="section-title">Terms of Service</h1>
+                <p class="section-text">By using our services, you agree to the following terms and conditions.</p>
+            </div>
+        </section>
+
+        <section class="terms-content section">
+            <div class="container">
+                <h2>1. Acceptance of Terms</h2>
+                <p>By accessing and using our website or services, you agree to be bound by these Terms of Service. If you do not agree, please refrain from using our services.</p>
+
+                <h2>2. Services Provided</h2>
+                <p>Arise Scaling offers digital marketing strategies and consulting services. We reserve the right to modify or discontinue any part of our services without prior notice.</p>
+
+                <h2>3. User Responsibilities</h2>
+                <p>You agree to use our services responsibly and in compliance with all applicable laws. Any misuse of our services may result in termination of access.</p>
+
+                <h2>4. Intellectual Property</h2>
+                <p>All content on this site, including logos, text, images, and designs, is the intellectual property of Arise Scaling unless otherwise stated. Unauthorized use is prohibited.</p>
+
+                <h2>5. Limitation of Liability</h2>
+                <p>Arise Scaling is not liable for any damages or losses arising from the use or inability to use our services, to the fullest extent permitted by law.</p>
+
+                <h2>6. Third-Party Links</h2>
+                <p>Our website may contain links to third-party websites. We are not responsible for the content or privacy practices of these websites.</p>
+
+                <h2>7. Governing Law</h2>
+                <p>These terms shall be governed by and construed in accordance with the laws of [Your State/Country]. Disputes shall be resolved in the courts of [Your Jurisdiction].</p>
+
+                <h2>8. Changes to Terms</h2>
+                <p>We reserve the right to update these Terms of Service at any time. Changes will be posted on this page with the "Last Updated" date.</p>
+
+                <p><strong>Last Updated:</strong> December 27, 2024</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Arise Scaling. All rights reserved.</p>
+            <nav class="footer__nav">
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms of Service</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle menu logic for mobile accessibility
+        const navToggle = document.querySelector('.nav__toggle');
+        const navLinks = document.querySelector('.nav__links');
+        
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+            navToggle.setAttribute('aria-expanded', !expanded);
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
 
